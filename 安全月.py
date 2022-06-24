@@ -100,9 +100,7 @@ def answerQues(state):
             exit()
 
 
-    ms=random.randint(10,28)
-    print(f'延时{ms}秒提交答案')
-    time.sleep(ms)
+
     
     url = 'https://aqy.lgb360.com/aqy/ques/answerQues'
 
@@ -114,7 +112,7 @@ def answerQues(state):
         print(da)
         da = char2num(da)
     else:
-        print("未找到答案，默认选B")
+        print("未找到答案，默认选A")
         da = "1"
         # 下面是自己输入答案，不用默认答案
         # dainput = input('输入答案需要，第一个为1：')
@@ -122,6 +120,9 @@ def answerQues(state):
         #     print(f'您输入的答案是{dainput}')
         #     da = dainput
 
+    ms=random.randint(10,28)
+    print(f'延时{ms}秒提交答案')
+    time.sleep(ms)
     
     dalist = list(da)
 
